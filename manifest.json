@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "OasCheat",
+  "version": "1.0",
+  "permissions": ["scripting"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://oas.lpu.in/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": { "default_title": "Auto Answer" }
+}
